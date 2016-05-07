@@ -18,12 +18,14 @@ function cc(card) {
     case 4:
     case 5:
     case 6:
+    // if any of the cards above shows up, it will ADD one point the `count` variable
       count += 1;
       break;
 
     case 7:
     case 8:
     case 9:
+    // if any of the cards above shows up, it will have no effect on the point value of `count` variable
       break;
 
     case 10:
@@ -31,8 +33,10 @@ function cc(card) {
     case 'Q':
     case 'K':
     case 'A':
+    // if any of the cards above shows up, it will DEDUCT one point the `count` variable
       count -= 1;
   }
+    // if the total value of `count` is greater than zero the player with receive an outoput of the current points value and a recommendation to Bet Otherwise, a value will be showed plus a recommendation to "Hold"
       if (count>0){
         return count + " Bet";
       }
